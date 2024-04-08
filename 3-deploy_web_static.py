@@ -7,7 +7,7 @@ from os.path import exists, isdir
 from datetime import datetime
 from os import stat
 
-env.hosts = ['52.87.255.243', '100.26.155.240']
+env.hosts = ['100.26.155.240', '52.87.255.243']
 
 
 date = datetime.now()
