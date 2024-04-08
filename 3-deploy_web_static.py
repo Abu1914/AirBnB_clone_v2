@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Creates archive and deploys it
+    Creates archive and deploys it
 """
 from fabric.api import local, run, put, env
 from os.path import exists, isdir
 from datetime import datetime
 from os import stat
 
-env.hosts = ['18.235.234.111', '100.25.181.230']
+env.hosts = ['52.87.255.243', '100.26.155.240']
 
 
 date = datetime.now()
