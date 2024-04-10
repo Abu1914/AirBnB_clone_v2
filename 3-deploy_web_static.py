@@ -25,3 +25,12 @@ def do_pack():
     if pack.succeeded:
         return path
     return None
+
+
+def deploy():
+    """creates and deploys an archive to my servers"""
+    archive = do_pack()
+    if archive is None:
+        return False
+    success = do_deploy(archive)
+    return success
