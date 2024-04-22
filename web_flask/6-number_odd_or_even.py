@@ -57,9 +57,9 @@ def number_odd_or_even(n):
     if isinstance(n, int):
         if n % 2 == 0:
             flag = "even"
-    else:
-        flag = "odd"
-    return render_template('6-number_odd_or_even.html', n=n, flag=flag)
+        else:
+            flag = "odd"
+        return render_template('6-number_odd_or_even.html', n=n, flag=flag)
 
 
 if __name__ == '__main__':
