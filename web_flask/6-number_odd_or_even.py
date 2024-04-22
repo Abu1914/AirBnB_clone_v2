@@ -56,7 +56,7 @@ def number_odd_or_even(n):
     """so the route must display odd or even template"""
     if isinstance(n, int):
         if n % 2 == 0:
-            flag = "evene"
+            flag = "even"
     else:
         flag = "odd"
     return render_template('6-number_odd_or_even.html', n=n, flag=flag)
