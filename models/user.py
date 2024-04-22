@@ -8,7 +8,7 @@ from os import getenv
 
 class User(BaseModel, Base):
     """This class defines a user by various attributes"""
-    __tablename__ = "user"
+    __tablename__ = "users"
     if getenv("HBNB_TYPE_STORAGE", "fs") == "db":
         email = Column(String(128), nullable=False)
         password = Column(String(128), nullable=False)
@@ -17,7 +17,7 @@ class User(BaseModel, Base):
         places = relationship("Place", backref="user", cascade="delete")
         review = relationship("Review", backref="user", cascade="delete")
     else:
-        email = ''
-        password = ''
-        first_name = ''
-        last_name = ''
+        email = ""
+        password = ""
+        first_name = ""
+        last_name = ""
