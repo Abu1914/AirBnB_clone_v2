@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-    Starts Flask web application
-    Web app listens on 0.0.0.0 port 5000
-    /hbnb page include
-    /c/<text> page included
-    /python/(<text>) page included
-    /number/<n> page included
-    /number_template/<n> page included
-    /number_odd_or_even/<n> page included
+Starts Flask web application
+Web app listens on 0.0.0.0 port 5000
+/hbnb page include
+/c/<text> page included
+/python/(<text>) page included
+/number/<n> page included
+/number_template/<n> page included
+/number_odd_or_even/<n> page included
 """
 from models import storage
 from models import *
