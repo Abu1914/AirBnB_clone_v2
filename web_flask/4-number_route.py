@@ -1,7 +1,4 @@
-#!/utrict_slashes=False)
-def number(n):
-    """n is a number"""
-        return "{:d} is a number".format(n)r/bin/python3
+#!/usr/bin/python3
 """
     Starts Flask web application
     Web app listens on 0.0.0.0 port 5000
