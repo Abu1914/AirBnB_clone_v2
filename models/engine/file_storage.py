@@ -1,58 +1,58 @@
 #!/usr/bin/python3
-"""
-    This module defines a class to manage file storage 
-    for hbnb clone
-"""
+'''
+    This module defines a class to manage file storage
+    For hbnb clone
+'''
 import json
 import models
 from models.state import State
 
 
 class FileStorage:
-    """
+    '''
         This class manages storage of hbnb models in JSON format
-    """
+    '''
     __file_path = 'file.json'
     __objects = {}
 
-    def all(self):
-        """
+    def all(self, cls=None):
+        '''
             Returns a dictionary of models currently in storage
-        """
+        '''
         fil_dict = {}
         if cls is None:
-            return self._objects
+            return self.__objects
 
         if cls != "":
-            for key,val in self.__objects.items():
+            for key, val in self.__objects.items():
                 if type(val) == cls:
                     fil_dict[key] = val
             return fil_dict
         else:
             return self.__objects
-        
+
     def new(self, obj):
-        """
+        '''
             Adds new object to storage dictionary
-        """
+        '''
         if obj is not None:
             key = obj.__class__.__name__ + "." + obj.id
             self.__objects[key] = obj
 
     def save(self):
-        """
+        '''
         Saves storage dictionary to file
-        """
+        '''
         temp = {}
-        for key, val in self._objects.items():
+        for key, val in self.__objects.items():
             temp[key] = val.to_dict()
         with open(self.__file_path, 'w') as f:
             json.dump(temp, f)
 
     def reload(self):
-        """
+        '''
         Loads storage dictionary from file
-        """
+        '''
         try:
             with open(self.__file_path, 'r') as myFile:
                 FileStorage.__objects = json.load(myFile)
@@ -77,3 +77,4 @@ class FileStorage:
     def close(self):
         """for deserializing the json file to objects"""
         self.reload()
+        
