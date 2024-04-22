@@ -60,7 +60,7 @@ def number_odd_or_even(n):
         if n % 2 == 0:
             flag = "even"
         else:
-             flag = "odd"
+            flag = "odd"
         return render_template('6-number_odd_or_even.html', n=n, flag=flag)
 
 
@@ -106,6 +106,7 @@ def html_filters():
     return render_template('10-hbnb_filters.html', states=sorted_states,
                            amenity=amenities)
 
+
 @app.route('/hbnb')
 def full_filters():
     """display full hbnb filters"""
@@ -119,8 +120,6 @@ def full_filters():
             if place.user_id == user.id:
                 place_owner.append("{} {}".format(user.first_name,
                                                   user.last_name), place])
-
-
     placeonwer.sort(key=lambda p: p[1].name)
     return render_template('100-hbnb.html', states=sorted_states,
                            amenity=amenities, place_owner=place_owner)
