@@ -23,7 +23,7 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def custom_text(text):
- """so the route must display c + text"""
+    """so the route must display c + text"""
      return "C {}".format(text.replace("_", " "))
 
 
