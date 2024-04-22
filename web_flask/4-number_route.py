@@ -1,4 +1,7 @@
-#!/usr/bin/python3
+#!/utrict_slashes=False)
+def number(n):
+    """n is a number"""
+        return "{:d} is a number".format(n)r/bin/python3
 """
     Starts Flask web application
     Web app listens on 0.0.0.0 port 5000
@@ -34,6 +37,12 @@ def custom_text(text):
 def python_text(text="is cool"):
     """so the route must display python + text"""
     return "Python {}".format(text.replace("_", " "))
+
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def number(n):
+    """n is a number"""
+    return "{:d} is a number".format(n)
 
 
 if __name__ == '__main__':
