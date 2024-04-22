@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-    Starts Flask web application
-    Web app listens on 0.0.0.0 port 5000
-    /hbnb page include
-    /c/<text> page included
+Starts Flask web application
+Web app listens on 0.0.0.0 port 5000
+/hbnb page include
+/c/<text> page included
 """
 from flask import Flask
 app = Flask(__name__)
@@ -24,7 +24,7 @@ def hbnb():
 @app.route('/c/<text>', strict_slashes=False)
 def custom_text(text):
     """so the route must display c + text"""
-     return "C {}".format(text.replace("_", " "))
+    return "C {}".format(text.replace("_", " "))
 
 
 if __name__ == '__main__':
