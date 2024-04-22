@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 '''
     This module defines a class to manage file storage
@@ -76,4 +77,4 @@ class FileStorage:
 
     def close(self):
         """for deserializing the json file to objects"""
-        self.reload()    
+        self.reload()
